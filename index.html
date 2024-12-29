@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeAdopt</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- feather icon -->
+<script src="https://unpkg.com/feather-icons"></script>
+
+<!-- my css -->
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+
+
+</head>
+<body>
+    <!-- navbar start -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span>HomeAdopt</span>
+            <img src="/images/logopaw.png" alt="logo" class="logo">
+        </div>
+
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#adoption">Adoption</a>
+            <a href="#faq">Faq</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="/src/register.html" id="signin"> Sign In</a>
+            <a href="/src/" id="signup" class="btn">Sign Up</a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+        <!-- serch form star -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search Here">
+            <button type="submit"><i data-feather="search"></i></button>
+        </div>
+        <!-- serch form end -->
+    </nav>
+    <!-- navbar end -->
+    
+
+<!-- hero section start -->
+<section class="hero" id="home">
+    <main class="content">
+        <h1>Find Your Perfect<br>
+            Companion<img src="/images/logopaw.png" alt="logo" class="log"> <br> 
+            Today</h1>
+        <p class="lead"></p>
+        <a href="#adoption" class="cta">Adopt Now</a>
+        <a href="/src/donate.html" class="cta">Donate for Food</a>
+        <div class="sponsor">
+            <img src="/images/logo1.svg" alt="logo1" class="logo-sponsor">
+            <img src="/images/logo2.svg" alt="logo2" class="logo-sponsor">
+            <img src="/images/logo3.svg" alt="logo3" class="logo-sponsor">
+            <img src="/images/logo4.svg" alt="logo4" class="logo-sponsor">
+        </div>
+    </main>
+</section>
+<!-- hero section end -->
+
+<!-- About section start -->
+<section class="about" id="about">
+    <p>OUR VISION FOR PETS</p>
+    <h2>Find Your Forever Friend<br> Today</h2>
+    <!-- <img src="/src/pageweb.png" alt="page-web" class="page-web"> -->
+
+    <div class="row">
+        <div class="about-img">
+            <img src="/images/pageweb.png" alt="page-web">
+        </div>
+
+        <div class="about-content">
+            <p>At HomeAdopt, we believe every animal deserves a loving home. <br>
+                Discover a new companion who will fill your days with joy and <br>
+                unconditional love. We also provide the resources <br>
+                and support you need to be the best pet parent possible.
+            </p> 
+            <br>
+            <br>
+            <p>ADOPTEASE COMMUNITY</p>
+            <h2>Together, We Create <br>Change</h2>
+            <p>The Adoptease community is a family of passionate <br>
+                animal lovers. We unite hearts, save lives, and create <br>
+                meaningful connections. Join us in making a difference – <br>
+                help us give these animals the bright future they deserve.
+            </p>
+
+            <div class="stats">
+                <div><h4 data-stat="500">0</h4><p>Volunteers</p></div>
+                <div><h4 data-stat="2500">0</h4><p>Dogs Rescues</p></div>
+                <div><h4 data-stat="3000">0</h4><p>Cats Rescues</p></div>
+            </div>
+            
+        </div>
+</section>
+<!-- About section  end -->
+
+<!-- Adoption section -->
+<section id="adoption" class="adoption">
+    <p>ADOPTION PET</p>
+    <h2>Give a Loving Home to Those <br>Who’ve Waited Too Long</h2>
+    <p>Why wait any longer? Come and meet your future furry <br>
+        friend at HomeAdopt. They’ve been waiting for a family <br>
+        like yours – let’s make their dreams come true together!
+    </p>
+
+
+        <!-- Content (Grid of Animals) -->
+        <div class="filter-buttons">
+            <button class="cta active" id="allBtn">ALL</button>
+            <button class="cta" id="dogBtn">DOGS</button>
+            <button class="cta" id="catBtn">CATS</button>
+        </div>
+    
+        <div class="grid-container">
+            <div class="grid-item" data-type="cat" data-image="\images\thinking.gif">
+                <img src="/images/cat 4.jpg" alt="Cat">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">21 Days Waiting</p>
+                <p class="animal-info">Sumbul</p>
+                <p class="animal-age">7 Months old</p>
+            </div>
+            <div class="grid-item" data-type="cat" data-image="\images\thinking.gif">
+                <img src="\images\cat 1.jpg" alt="Cat">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">15 Days Waiting</p>
+                <p class="animal-info">Ucup</p>
+                <p class="animal-age">6 Months old</p>
+            </div>
+            <div class="grid-item" data-type="dog" data-image="\images\thinking.gif">
+                <img src="\images\dog 1.jpg" alt="Dog">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">10 Days Waiting</p>
+                <p class="animal-info">Rusdi</p>
+                <p class="animal-age">4 Months old</p>
+            </div>
+            <div class="grid-item" data-type="dog" data-image="\images\thinking.gif">
+                <img src="/images/dog 2.jpg" alt="Dog">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">7 Days Waiting</p>
+                <p class="animal-info">Yanto</p>
+                <p class="animal-age">5 Months old</p>
+            </div>
+            <div class="grid-item" data-type="dog" data-image="\images\thinking.gif">
+                <img src="/images/dog 3.jpg" alt="Dog">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">7 Days Waiting</p>
+                <p class="animal-info">Faiz</p>
+                <p class="animal-age"> 6 Months old</p>
+            </div>
+            <div class="grid-item" data-type="dog" data-image="\images\thinking.gif">
+                <img src="/images/dog 4.jpg" alt="Dog">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">7 Days Waiting</p>
+                <p class="animal-info">Rehan</p>
+                <p class="animal-age">2 Years old</p>
+            </div>
+            <div class="grid-item" data-type="cat" data-image="\images\thinking.gif">
+                <img src="\images\cat 3.jpg" alt="Cat">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">7 Days Waiting</p>
+                <p class="animal-info">Udin</p>
+                <p class="animal-age">1 Years old</p>
+            </div>
+            <div class="grid-item" data-type="cat" data-image="\images\thinking.gif">
+                <img src="/images/cat 2.jpg" alt="Cat">
+                <div class="overlay">
+                    <button>Adopt now</button>
+                </div>
+                <p class="days-waiting">7 Days Waiting</p>
+                <p class="animal-info">Farel</p>
+                <p class="animal-age">1 Years old</p>
+            </div>
+        </div>
+    
+        <div id="adoptModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="" alt="Animal Image">
+                <h2>Are you sure</h2>
+                <p> you want to adopt this pet?</p>
+                <button id="yesBtn" class="cta-yes">Yes, Adopt Now</button>
+                <button id="noBtn" class="cta-no">No, Cancel</button>
+            </div>
+        </div>
+
+        <div id="successAlert" class="modal">
+            <div class="modal-content">
+                <span class="close-alert">&times;</span>
+                <img id="successImage" src="/images/thumbs-up-cat.gif" alt="Success" style="width: 100px; height: 100px; margin-bottom: 20px;">
+                <h2>Success!</h2>
+                <p id="successMessage">Successfully adopted this pet!</p>
+                <button id="successCloseBtn" class="cta">OK</button>
+            </div>
+        </div>
+        
+        <div id="noAlert" class="modal">
+            <div class="modal-content">
+                <span class="close-alert">&times;</span>
+                <img id="noImage" src="/images/sad cats.jpg" alt="No Action" style="width: 100px; height: 100px; margin-bottom: 20px;">
+                <h2>Cancelled!</h2>
+                <p id="noMessage">Returning to the adoption menu.</p>
+                <button id="noCloseBtn" class="cta">OK</button>
+            </div>
+        </div>        
+</section>
+<!-- Adoption section end-->
+
+
+<!-- FAQ/Q&A Section Start -->
+<section id="faq" class="faq">
+    <p>QUESTION AND ANSWER FORUM</p>
+    <h2>Help pets find a loving home</h2>
+
+    <ul class="accordion">
+        <li>
+            <label>What are the steps to adopt a pet?</label>
+            <div class="content">
+                <p>To adopt a pet, browse our list of available animals, submit an 
+                    adoption request, and complete the verification process.
+                    Once approved, sign the adoption agreement and bring your new pet home.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label>How can I adopt a cat?</label>
+            <div class="content">
+                <p>Visit the "Cats for Adoption" section, choose a cat that 
+                    suits you, and fill out the adoption form. After approval, 
+                    complete the process and take your cat home.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label>What should I prepare to adopt a dog?</label>
+            <div class="content">
+                <p>Prepare a safe space, food, water bowls, and bedding for the dog. 
+                    Ensure you have the time, funds, and commitment to provide food, 
+                    exercise, and care.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label>Are there any fees required to adopt a pet?</label>
+            <div class="content">
+                <p>Yes, adoption fees help cover vaccinations, health checks, 
+                    and basic care. Fees vary based on the pet but remain affordable.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label>Does this platform offer other animals besides cats and dogs?</label>
+            <div class="content">
+                <p>Currently, we focus on cats and dogs, but we plan 
+                    to include other animals like rabbits or birds in the future.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label>Is there a dedicated clinic for adopted animals here?</label>
+            <div class="content">
+                <p>Yes, we partner with a veterinary clinic offering vaccinations, 
+                    health checks, and other medical services for adopted animals.
+                </p>
+            </div>
+        </li>
+    </ul>
+</section>
+<!-- faq/q&a section end -->
+
+<!-- contact section start -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Send us a message and we'll get back to you as soon as possible.</p>
+
+    <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.970855558626!2d110.33364504395989!3d-7.
+        803248457450711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2
+        C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1734108268127!5m2!1sid!2sid" 
+        allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+        <form action="">
+        <div class="input-groub">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="Name">
+        </div>
+        <div class="input-groub">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email">
+        </div>
+        <div class="input-groub">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="phone">
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+    </div>
+</section>
+<!-- contact section end -->
+
+<!-- footer -->
+<footer>
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="youtube"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#adoption">Adoption</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="credit">
+        <p>Created by <a href="#">HomeAdopt</a> | &copy; 2024.</p>
+    </div>
+</footer>
+<!-- footer end -->
+
+<!-- feather icon -->
+<script>
+    feather.replace();
+</script>
+
+<!-- my js -->
+<script src="/js/script.js"></script>
+
+
+<!-- gsap -->
+<script>
+    // Register ScrollTrigger Plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Navbar Animasi dengan Efek Kelebihan Lalu Balik
+    gsap.from(".navbar", {
+        y: -100, // Mulai di atas halaman
+        opacity: 0, // Mulai dengan opacity 0 (sembunyi)
+        duration: 1, // Durasi animasi
+        ease: "back.out(2.5)", // Efek overshoot dan kembali ke posisi semula
+    });
+
+    // Hero Section Animasi dengan Efek Kelebihan Lalu Balik
+    gsap.from(".hero", {
+        opacity: 0,  // Mulai dengan opacity 0
+        y: 50,  // Mulai dengan posisi lebih bawah 50px
+        duration: 3, // Durasi animasi
+        ease: "back.out(2.5)", // Efek overshoot dan kembali ke posisi semula
+        delay: 1.5,  // Delay selama 2 detik sebelum animasi dimulai
+        scrollTrigger: {
+            trigger: ".hero",  // Elemen yang memicu animasi
+            start: "top 90%",  // Animasi mulai saat elemen 90% terlihat
+            end: "top 60%",  // Berakhir saat elemen mencapai 60%
+            toggleActions: "play none none none",  // Hanya bermain sekali
+        },
+    });
+
+    // Hero Content Animasi dengan Efek Kelebihan Lalu Balik
+    gsap.from(".hero .content h1", {
+        opacity: 0,  // Mulai dengan opacity 0
+        y: 50,  // Mulai dengan posisi lebih bawah 50px
+        duration: 1.5,  // Durasi animasi
+        ease: "back.out(2.5)",  // Efek overshoot dan kembali
+        delay: 2.5,  // Delay selama 2.5 detik setelah halaman dimuat
+        scrollTrigger: {
+            trigger: ".hero",
+            start: "top 80%",  // Mulai saat hero mendekati viewport
+        }
+    });
+
+    gsap.registerPlugin(TextPlugin);
+
+// Menggunakan TextPlugin dengan teks yang ingin ditampilkan
+gsap.to('.lead', {
+    duration: 2, 
+    delay: 3, 
+    text: 'Adopt a pet, bring love and joy into your <br> home, and build a lasting bond with a loyal friend' 
+});
+
+    // Animasi untuk tombol "Adopt Now" dan "Donate for Food"
+    gsap.utils.toArray('.cta').forEach((button, index) => {
+        gsap.from(button, {
+            scrollTrigger: {
+                trigger: button,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power2.out",
+            delay: index * 1, // Delay bertahap untuk setiap elemen
+            onComplete: () => gsap.set(button, { clearProps: "all" }),
+        });
+    });
+
+    // About Section Animasi
+    gsap.from(".about .row", {
+        duration: 1.5,
+        opacity: 0,
+        x: -100,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".about",
+            start: "top 85%", // Mulai lebih dekat dengan viewport
+        }
+    });
+
+    // Animasi Grid Items di Adoption Section (Muncul Bersamaan dari Samping)
+    gsap.from(".grid-item", {
+        duration: 3,
+        opacity: 0,  // Mulai dengan opacity 0
+        x: 200,  // Mulai dari kiri (-100px) untuk muncul dari kiri. Bisa diubah ke 100 untuk muncul dari kanan
+        stagger: 0,  // Semua item muncul bersamaan
+        ease: "power4.out",  // Efek easing yang lebih smooth
+        scrollTrigger: {
+            trigger: ".adoption",  // Memicu animasi saat elemen .adoption terlihat
+            start: "top 100%",  // Animasi mulai saat bagian atas .adoption mencapai bawah viewport
+            end: "top 100%",  // Animasi berakhir saat bagian atas .adoption mencapai 50% dari viewport
+            toggleActions: "play none none none",  // Animasi hanya diputar sekali
+        }
+    });
+
+    // Footer Animasi
+    gsap.from("footer .socials a", {
+        duration: 1.2,
+        opacity: 0,
+        y: 20,
+        stagger: 0.2,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: "footer",
+            start: "top 90%",
+        }
+    });
+
+    gsap.from("footer .links a", {
+        duration: 1.2,
+        opacity: 0,
+        y: 20,
+        stagger: 0.2,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: "footer",
+            start: "top 90%",
+        }
+    });
+
+    gsap.from("footer .credit p", {
+        duration: 1.5,
+        opacity: 0,
+        y: 20,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: "footer",
+            start: "top 90%",
+        }
+    });
+
+    // Animasi untuk angka statistik (Volunteers, Dogs Rescues, Cats Rescues)
+    gsap.utils.toArray(".stats h4").forEach((stat, index) => {
+        let finalValue = stat.getAttribute("data-stat"); // Ambil nilai akhir dari data-stat
+
+        gsap.fromTo(stat, {
+            textContent: "0", // Mulai dari 0
+        }, {
+            textContent: finalValue, // Animasi menuju nilai akhir
+            duration: 2, // Durasi animasi
+            ease: "power1.out", // Easing untuk animasi lebih smooth
+            scrollTrigger: {
+                trigger: stat,
+                start: "top 80%", // Mulai animasi saat elemen berada 80% dari viewport
+                end: "top 50%", // Berhenti saat elemen berada 50% dari viewport
+                toggleActions: "play none none none", // Mengatur animasi untuk hanya berjalan sekali
+                delay: index * 0.3, // Delay bertahap berdasarkan urutan elemen
+            },
+            onUpdate: function () {
+                stat.innerText = Math.ceil(parseFloat(stat.textContent)); // Update angka menjadi bulat
+            }
+        });
+    });
+</script>
+<!-- gsap end -->
+
+</body>
+</html>

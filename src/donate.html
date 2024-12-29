@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Donate</title>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- feather icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- my css -->
+    <link rel="stylesheet" href="/css/donate.css">
+</head>
+<body>
+        <!-- navbar start -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span>HomeAdopt</span>
+                <img src="/images/logopaw.png" alt="logo" class="logo">
+            </div>
+    
+            <div class="navbar-nav">
+                <a href="/index.html">Home</a>
+                <a href="#home">About</a>
+                <a href="#donate">Donate</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+    
+            <div class="navbar-extra">
+                <a href="#" id="search-button"><i data-feather="search"></i></a>
+                <a href="/src/register.html" id="signin"> Sign In</a>
+                <a href="/src/login.html" id="signup" class="btn">Sign Up</a>
+                <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            </div>
+    
+            <!-- serch form star -->
+            <div class="search-form">
+                <input type="search" id="search-box" placeholder="Search Here">
+                <button type="submit"><i data-feather="search"></i></button>
+            </div>
+            <!-- serch form end -->
+        </nav>
+        <!-- navbar end -->
+
+        <!-- hero section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Help Feed Cats and Dogs in Need</h2>
+                <p>Your contribution can save lives. Join us in making a difference today!</p>
+                <a href="#donate" class="btn">Donate Now</a>
+            </div>
+        </section>
+        <!-- hero section end -->
+    
+        <!-- about section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Why Your Donation Matters</h2>
+                <p>Your donation can help provide food and hope to abandoned and homeless cats and dogs. <br>
+                    Together, we can ensure that no pet goes to bed hungry and that each one has a brighter tomorrow.
+                    </p>
+            </div>
+        </section>
+        <!-- about section end -->
+
+
+        <!-- donation form -->
+        <section id="donate" class="donation-form">
+            <div class="container">
+                <h2>Make a Donation</h2>
+                <form action="#">
+                    <label for="amount">Donation Amount:</label>
+                    <select id="amount" name="amount" onchange="convertToCustomInput(this)">
+                        <option value="10">$10</option>
+                        <option value="25">$25</option>
+                        <option value="50">$50</option>
+                        <option value="100">$100</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit" class="btn">Donate Now</button>
+                </form>
+            </div>
+        </section>
+        <!-- donation form end -->
+    
+<!-- galery -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2>Pets Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/images/galery 1.jpg" alt="Gallery Image 1">
+                <p>A friendly dog and a small cat sit side by side, peacefully sharing a bowl of food. Their bond demonstrates the beauty of harmony and mutual respect, showing how even the most unlikely friendships can thrive in an environment of care and understanding.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galery 2.jpg" alt="Gallery Image 2">
+                <p>Two fluffy cats sit close to each other, enjoying their meal from matching bowls. Their soft purring and relaxed posture create a warm and comforting scene, reminding us of the joy that comes from sharing simple moments with loved ones.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galery 3.webp" alt="Gallery Image 3">
+                <p>A playful cat and a gentle dog gather around a shared plate of food. Their cheerful demeanor reflects the trust and companionship they’ve built, proving that kindness knows no boundaries, even between different species.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galery 4.jpg" alt="Gallery Image 4">
+                <p>A curious kitten and a loyal dog share a meal under the soft glow of the evening sun. Their interaction is full of mutual respect, as they quietly enjoy their food, creating a heartwarming picture of coexistence and friendship.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galery 5.webp" alt="Gallery Image 5">
+                <p>A solitary cat sits contentedly by its bowl, savoring every bite of its meal. Its serene expression shows the peacefulness of a quiet moment, highlighting the importance of taking time to enjoy life's simple pleasures.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galery 6.jpg" alt="Gallery Image 6">
+                <p>A cheerful group of dogs of various breeds gathers in a sunny park. Some are playing together, while others patiently wait for their turn at the food bowls. Their wagging tails and happy barks fill the air, radiating joy and a sense of community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- galery end -->
+
+<!-- footer -->
+<footer>
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="youtube"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="/index.html">Home</a>
+        <a href="#home">About</a>
+        <a href="#donate">Donate</a>
+        <a href="#gallery">Gallery</a>
+    </div>
+
+    <div class="credit">
+        <p>Created by <a href="#">HomeAdopt</a> | &copy; 2024.</p>
+    </div>
+</footer>
+<!-- footer end -->
+
+
+<!-- feather icon -->
+<script>
+    feather.replace();
+</script>
+
+<!-- my js -->
+<script src="/js/script.js"></script>
+</body>
+</html>
